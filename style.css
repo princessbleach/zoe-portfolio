@@ -1,0 +1,596 @@
+
+/* ========================================
+   ZOE EFSTATHIOU — PORTFOLIO STYLESHEET
+   White & Pink Theme — No Gradients
+   ======================================== */
+
+/* ---------- COLOURS & VARIABLES ---------- */
+
+:root {
+  --pink: #ffa2cf;
+  --pink-light: #fff0f5;
+  --pink-dark: #ff69b1;
+  --white: #ffffff;
+  --off-white: #fff8fa;
+  --black: #252025;
+  --grey: #777078;
+  --light-grey: #ffffff;
+  --border: #ffc0d0;
+  --font-main: Arial, Helvetica, sans-serif;
+  --transition: 0.25s ease;
+}
+
+/* ---------- RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-main);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--black);
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  padding: 20px 7%;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--pink-dark);
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+.navbar nav a:hover,
+.navbar nav a[aria-current="page"] {
+  color: var(--pink-dark);
+}
+
+.navbar nav .nav-button {
+  padding: 9px 18px;
+  background: var(--pink);
+  color: var(--black);
+  border-radius: 30px;
+}
+
+.navbar nav .nav-button:hover {
+  background: var(--pink-dark);
+  color: var(--white);
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 570px;
+  padding: 120px 10%;
+
+  display: flex;
+  align-items: center;
+
+  /* Solid background — no gradient */
+  background: var(--off-white);
+}
+
+.hero-text {
+  width: 100%;
+  max-width: 850px;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+  color: var(--pink-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin-bottom: 25px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -4px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.section-title h2 span,
+.contact h2 span {
+  color: var(--pink-dark);
+}
+
+.intro {
+  max-width: 650px;
+  color: var(--grey);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 13px 25px;
+  border: 1px solid var(--pink);
+  border-radius: 30px;
+
+  background: var(--pink);
+  color: var(--black);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.button:hover {
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.text-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  color: var(--pink-dark);
+}
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+.section {
+  padding: 100px 10%;
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
+
+.section-heading h2,
+.section-title h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.section-description {
+  margin-top: 15px;
+  color: var(--grey);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 45px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.about-content {
+  max-width: 760px;
+}
+
+.about-content > p {
+  margin-bottom: 22px;
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.about-content strong {
+  color: var(--black);
+}
+
+/* ---------- PROJECT GRID ---------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.project-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(190, 120, 120, 0.12);
+}
+
+.project-art {
+  position: relative;
+  min-height: 220px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--pink-light);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.04);
+}
+
+.project-number {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+
+  padding: 7px 12px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--black);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.project-info {
+  padding: 28px;
+}
+
+.project-type {
+  margin-bottom: 10px;
+  color: var(--pink-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.project-info h3,
+.project-content h3,
+.soundcloud-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.project-info > p:not(.project-type) {
+  margin-bottom: 18px;
+  color: var(--grey);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tags span {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  background: var(--pink-light);
+  color: #795c5c;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.project-link {
+  display: inline-block;
+  margin: 0 28px 25px;
+  color: var(--pink-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.project-link:hover {
+  color: var(--black);
+}
+
+/* ---------- AUDIO SHOWCASE ---------- */
+
+.soundcloud-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.soundcloud-card {
+  min-width: 0;
+  padding: 25px;
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--off-white);
+}
+
+.track-number {
+  margin-bottom: 12px;
+  color: var(--pink-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.soundcloud-card h3 {
+  margin-bottom: 20px;
+}
+
+.soundcloud-card iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+.soundcloud-caption {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.soundcloud-caption a {
+  color: var(--pink-dark);
+}
+
+.soundcloud-caption a:hover {
+  color: var(--black);
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+  padding: 110px 10%;
+  text-align: center;
+
+  /* Solid light-pink background — no gradient */
+  background: var(--pink-light);
+}
+
+.contact h2 {
+  margin-bottom: 25px;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -3px;
+}
+
+.contact > p:not(.eyebrow) {
+  max-width: 550px;
+  margin: 0 auto 30px;
+  color: var(--grey);
+}
+
+.contact-button {
+  margin-top: 5px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 30px 7%;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+
+footer p {
+  color: var(--grey);
+  font-size: 0.8rem;
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--pink-dark);
+  outline-offset: 4px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 18px 5%;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    gap: 15px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-grid,
+  .soundcloud-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .section,
+  .contact {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+
+  .navbar nav a {
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    letter-spacing: -2px;
+  }
+
+  .hero-buttons {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-heading h2,
+  .section-title h2 {
+    letter-spacing: -1px;
+  }
+
+  .project-info {
+    padding: 22px;
+  }
+
+  .soundcloud-card {
+    padding: 18px;
+  }
+
+  .contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .contact h2 {
+    letter-spacing: -1.5px;
+  }
+
+  footer {
+    padding: 25px 6%;
+  }
+}
