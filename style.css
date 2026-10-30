@@ -266,6 +266,15 @@ a {
   line-height: 1.9;
 }
 
+.about-content {
+  margin-bottom: 35px;
+}
+
+.about-content:last-of-type {
+  margin-bottom: 0;
+}
+
+
 .about-content strong {
   color: var(--black);
 }
